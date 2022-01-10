@@ -1303,14 +1303,6 @@ final class Cache_Enabler_Disk {
             return false;
         }
 
-        if ( $fs->getchmod( $parent_dir ) !== $mode_string ) {
-            return $fs->chmod( $parent_dir, $mode_octal, true );
-        }
-
-        if ( $fs->getchmod( $dir ) !== $mode_string ) {
-            return $fs->chmod( $dir, $mode_octal );
-        }
-
         return true;
     }
 
